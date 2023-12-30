@@ -257,7 +257,7 @@ class _HomePageState extends State<HomePage> {
   Widget buildCities() {
     var prov = Provider.of<HomePageProvider>(context, listen: true);
     return FutureBuilder(
-        future: HomePageProvider().getcities(1),
+        future: CityRepository().getcities(id:1),
         builder: (context, snapshot) {
           if (!snapshot.hasData) {
             return CircularProgressIndicator(
