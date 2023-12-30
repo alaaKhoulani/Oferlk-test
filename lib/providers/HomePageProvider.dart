@@ -35,7 +35,7 @@ class HomePageProvider extends ChangeNotifier {
   }
 
   Future<dynamic> getCategories(int id) async {
-    categoriesList=null;
+    // categoriesList=null;
     this.categoriesList = await CategoryRepository().getcategories(id: id);
     notifyListeners();
   }
